@@ -15,5 +15,5 @@ spec:
         app: fastapi-host
     spec:
       containers:
-        - image: nospamplease/fastapi-host:latest
+        - image: nospamplease/fastapi-host:v1
           name: fastapi-host
