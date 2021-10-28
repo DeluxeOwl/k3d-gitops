@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: fastapi-host
+  name: fastapi-host
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fastapi-host
+  template:
+    metadata:
+      labels:
+        app: fastapi-host
+    spec:
+      containers:
+        - image: nospamplease/fastapi-host:latest
+          name: fastapi-host

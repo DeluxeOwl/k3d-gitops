@@ -1,0 +1,39 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: main
+  namespace: default
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
+spec:
+  rules:
+    - host: nginx.127-0-0-1.sslip.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: nginx
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
+    - host: vault.127-0-0-1.sslip.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: vault-ui
+                port:
+                  number: 8200
+            path: /
+            pathType: Prefix
+    - host: "*.d.127-0-0-1.sslip.io"
+      http:
+        paths:
+          - backend:
+              service:
+                name: fastapi-host
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
