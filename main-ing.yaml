@@ -17,6 +17,16 @@ spec:
                   number: 80
             path: /
             pathType: Prefix
+    - host: grafana.127-0-0-1.sslip.io
+      http:
+        paths:
+          - backend:
+              service:
+                name: kube-prometheus-stack-grafana
+                port:
+                  number: 80
+            path: /
+            pathType: Prefix
     - host: "*.d.127-0-0-1.sslip.io"
       http:
         paths:
