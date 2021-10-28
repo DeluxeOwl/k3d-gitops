@@ -28,3 +28,7 @@ Going for the full open source stack.
 - istio for service mesh
 
 After this `"project"` is done, I'm planning to do a full production ready cluster on Azure with terraform and azure services to replace the stack above.
+
+# Install steps
+
+Get argocd up and running: https://argo-cd.readthedocs.io/en/stable/getting_started/
