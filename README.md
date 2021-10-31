@@ -25,7 +25,7 @@ Going for the full open source stack.
 - ory suite for identity, authorization (or OPA?) 
 - harbor for registry
 - gitea/gitlab for git + concourse/drone CI + dev pipeline (or argoworkflows?)
-- rook/ceph for storage (hard with k3d?)
+- rook/ceph/longhorn for storage (hard with k3d?)
 - istio for service mesh
 - traefik as ingress controller
 
