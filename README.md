@@ -18,14 +18,16 @@ This is a repo of my yaml files for kubernetes (k3d for local dev) + gitops usin
 
 Going for the full open source stack.
 
+- helm for package management
+- argocd for cd on kubernetes
 - hashicorp vault for secret management
 - prometheus + grafana for monitoring
-- ory suite for identity access
-- argocd for cd on kubernetes
+- ory suite for identity, authorization (or OPA?) 
 - harbor for registry
-- gitea for git + concourse/drone CI + dev pipeline
+- gitea/gitlab for git + concourse/drone CI + dev pipeline (or argoworkflows?)
 - rook/ceph for storage (hard with k3d?)
 - istio for service mesh
+- traefik as ingress controller
 
 After this `"project"` is done, I'm planning to do a full production ready cluster on Azure with terraform and azure services to replace the stack above.
 
