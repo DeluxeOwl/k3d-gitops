@@ -18,16 +18,27 @@ This is a repo of my yaml files for kubernetes (k3d for local dev) + gitops usin
 
 Going for the full open source stack.
 
-- helm for package management
-- argocd for cd on kubernetes
-- hashicorp vault for secret management
-- prometheus + grafana for monitoring
-- ory suite for identity, authorization (or OPA?) 
-- harbor for registry
-- gitea/gitlab for git + concourse/drone CI + dev pipeline (or argoworkflows?)
-- rook/ceph/longhorn for storage (hard with k3d?)
-- istio for service mesh
-- traefik as ingress controller
+
+- [helm](https://helm.sh/) for package management (with argo)
+- [argocd](https://argo-cd.readthedocs.io/en/stable/) for cd
+- [hashicorp vault](https://www.vaultproject.io/) for secret management
+- [prometheus](https://prometheus.io/) + [grafana](https://grafana.com/) for monitoring
+- [ory suite](https://www.ory.sh/) for identity, authorization (or [OPA](https://www.openpolicyagent.org/)?)
+- [harbor](https://goharbor.io/) for container registry
+- [gitea](https://gitea.io/en-us/)/[gitlab](https://about.gitlab.com/) for git
+- [concourse](https://concourse-ci.org/)/[drone](https://www.drone.io/) CI (or [argo workflows](https://argoproj.github.io/workflows/)?)
+- [rook](https://rook.io/)/[longhorn](https://longhorn.io/) for distributed storage
+- [istio](https://istio.io/) for service mesh
+- [traefik](https://doc.traefik.io/traefik/providers/kubernetes-ingress/) as ingress controller  
+* [Falco](https://falco.org/) - to monitor suspicious activity  
+* [cert-manager](https://cert-manager.io/) - to manage certificates inside k8s  
+* [Calico](https://docs.projectcalico.org/getting-started/kubernetes/) - for network policies  
+* [Loki](https://grafana.com/oss/loki/) - for log aggregation  
+* [Velero](https://velero.io/) - for cluster backups  
+* [OpenFaaS](https://www.openfaas.com/) - serverless functions
+* [Linkerd](https://linkerd.io/) instead of Istio?
+
+Based on [my reddit post on /r/kubernetes](https://www.reddit.com/r/kubernetes/comments/qju6qg/building_a_complete_cluster_locally/?sort=top)
 
 After this `"project"` is done, I'm planning to do a full production ready cluster on Azure with terraform and azure services to replace the stack above.
 
