@@ -38,6 +38,8 @@ Going for the full open source stack.
 * [OpenFaaS](https://www.openfaas.com/) - serverless functions
 * [Linkerd](https://linkerd.io/) instead of Istio?
 
+Cilium, talos, deckhouse from flant
+
 Based on [my reddit post on /r/kubernetes](https://www.reddit.com/r/kubernetes/comments/qju6qg/building_a_complete_cluster_locally/?sort=top)
 
 After this `"project"` is done, I'm planning to do a full production ready cluster on Azure with terraform and azure services to replace the stack above.
